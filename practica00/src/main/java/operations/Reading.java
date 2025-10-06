@@ -10,7 +10,7 @@ import java.util.StringTokenizer;
 
 public class Reading {
     public void read(String fileName) {
-        String cadenaLeida = "";
+        String line = "";
         FileReader fr;
         
         try {
@@ -18,14 +18,14 @@ public class Reading {
             BufferedReader archivoLectura = new BufferedReader(fr);
             Student student = new Student();
             System.out.println("Los alumnos son:");
-            cadenaLeida = archivoLectura.readLine();
-            while (cadenaLeida != null) {
-                StringTokenizer st = new StringTokenizer(cadenaLeida,",");
+            line = archivoLectura.readLine();
+            while (line != null) {
+                StringTokenizer st = new StringTokenizer(line,",");
                 student.setIdStudent(Integer.parseInt(st.nextToken()));
                 student.setName(st.nextToken());
                 student.setDegree(st.nextToken());
                 System.out.println(student.toString());
-                cadenaLeida = archivoLectura.readLine();
+                line = archivoLectura.readLine();
             }
             archivoLectura.close();
         } catch (FileNotFoundException e) {
