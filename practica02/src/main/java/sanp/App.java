@@ -18,7 +18,7 @@ public class App
         Student student = new Student();
         student.setName("Sergio");
         student.setIdStudent(1);
-        student.setDegree("Ingeniería Informática");
+        student.setDegree(1);
         return student;
     }
 
