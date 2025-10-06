@@ -4,7 +4,7 @@ public class Student {
     private int idStudent; //Matricula
     private String name;
     private String lastName;
-    private int degree;
+    private int degree; //<-- Se cambio a tipo entero, corregir errores.
     private String semester;
     private double promedio;
     // 📝 agregar 3 atributos de diferente tipos, con set & get
