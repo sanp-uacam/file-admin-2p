@@ -1,6 +1,7 @@
 package sanp;
 
 import grade.Student;
+import grade.Degree;
 import operations.Reading;
 import operations.Writing;
 
@@ -18,7 +19,7 @@ public class App
         Student student = new Student();
         student.setName("Sergio");
         student.setIdStudent(1);
-        student.setDegree(1);
+        student.setDegree(Degree.ING_SOFTWARE);
         return student;
     }
 

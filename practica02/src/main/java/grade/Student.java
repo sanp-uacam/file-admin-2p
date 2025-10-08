@@ -4,7 +4,7 @@ public class Student {
     private int idStudent; //Matricula
     private String name;
     private String lastName;
-    private int degree; //<-- Se cambio a tipo entero, corregir errores.
+    private Degree degree; 
     private String semester;
     private double promedio;
     // 📝 agregar 3 atributos de diferente tipos, con set & get
@@ -13,12 +13,12 @@ public class Student {
     public void setIdStudent(int idStudent) { this.idStudent = idStudent; }
     public void setName(String name) { this.name = name; }
     public void setLastName(String lastName) { this.lastName = lastName; }
-    public void setDegree(int degree) { this.degree = degree; }
+    public void setDegree(Degree degree) { this.degree = degree; }
     
     public int getIdStudent() { return idStudent;   }
     public String getName() { return name; }
     public String getLastName() { return lastName; }
-    public int getDegree() { return degree; }
+    public Degree getDegree() { return degree; }
 
     public String toString() {
         String message = "";
@@ -26,4 +26,8 @@ public class Student {
         this.degree;
         return message;
     }
+    // public void setDegree(Degree ingSoftware) {
+    //     // TODO Auto-generated method stub
+    //     throw new UnsupportedOperationException("Unimplemented method 'setDegree'");
+    // }
 }

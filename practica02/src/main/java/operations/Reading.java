@@ -23,7 +23,7 @@ public class Reading {
                 StringTokenizer st = new StringTokenizer(line,",");
                 student.setIdStudent(Integer.parseInt(st.nextToken()));
                 student.setName(st.nextToken());
-                student.setDegree(st.nextToken());
+                student.setDegree(Integer.parseInt(st.nextToken()));
                 System.out.println(student.toString());
                 line = archivoLectura.readLine();
             }
