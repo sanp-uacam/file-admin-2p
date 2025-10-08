@@ -1,5 +1,6 @@
 package operations;
 
+import grade.Degree;
 import grade.Student;
 
 import java.io.BufferedReader;
@@ -23,7 +24,7 @@ public class Reading {
                 StringTokenizer st = new StringTokenizer(line,",");
                 student.setIdStudent(Integer.parseInt(st.nextToken()));
                 student.setName(st.nextToken());
-                student.setDegree(Integer.parseInt(st.nextToken()));
+                student.setDegree(Degree.valueOf(st.nextToken()));
                 System.out.println(student.toString());
                 line = archivoLectura.readLine();
             }

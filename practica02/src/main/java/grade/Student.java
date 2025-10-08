@@ -26,8 +26,4 @@ public class Student {
         this.degree;
         return message;
     }
-    // public void setDegree(Degree ingSoftware) {
-    //     // TODO Auto-generated method stub
-    //     throw new UnsupportedOperationException("Unimplemented method 'setDegree'");
-    // }
 }
