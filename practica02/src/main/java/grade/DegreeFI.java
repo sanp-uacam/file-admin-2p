@@ -4,10 +4,20 @@ public class DegreeFI {
     private int idDegree;
     private String degreeName;
 
-    //📝 Agregar set & get para degreeName
+    // 📝 Agregar set & get para degreeName
+    void setDegreeName(String degreeName) {
+        this.degreeName = degreeName;
+    }
 
-    void setIdDegree (int idDegree){this.idDegree =  idDegree;}
+    String getDegreeName() {
+        return this.degreeName;
+    }
 
-    int getIdDegree (){return this.idDegree; }
+    void setIdDegree(int idDegree) {
+        this.idDegree = idDegree;
+    }
 
+    int getIdDegree() {
+        return this.idDegree;
+    }
 }
