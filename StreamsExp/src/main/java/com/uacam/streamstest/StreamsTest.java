@@ -109,9 +109,31 @@ public class StreamsTest {
             System.getLogger(StreamsTest.class.getName()).log(System.Logger.Level.ERROR, (String) null, ex);
         } 
     }
+    
+    static void leerEmpleado(){
+        
+        ArrayList<EmpleadoUAC> empleadosUAC = null;
+        
+        try (InputStream fis = new FileInputStream("EmpleadosUAC_DB.txt"); 
+                 ObjectInputStream ois = new ObjectInputStream(fis)) {
+            
+            empleadosUAC = (ArrayList<EmpleadoUAC>) ois.readObject();
+         
+        } catch (FileNotFoundException ex) {
+            System.getLogger(StreamsTest.class.getName()).log(System.Logger.Level.ERROR, (String) null, ex);
+        } catch (IOException ex) {
+            System.getLogger(StreamsTest.class.getName()).log(System.Logger.Level.ERROR, (String) null, ex);
+        } catch (ClassNotFoundException ex) {
+            System.getLogger(StreamsTest.class.getName()).log(System.Logger.Level.ERROR, (String) null, ex);
+        }
+        
+        for (EmpleadoUAC euac : empleadosUAC) {
+            System.err.println(euac);
+        }
+    }
 
     public static void main(String[] args) throws FileNotFoundException {
-        escribirEmpleado();
+        leerEmpleado();
 
     }
 }

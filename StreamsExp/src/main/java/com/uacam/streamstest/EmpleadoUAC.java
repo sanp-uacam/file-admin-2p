@@ -11,7 +11,7 @@ import java.io.Serializable;
  * @author sergi
  */
 public class EmpleadoUAC implements Serializable {
-    //private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 1L;
 
     String name;
     String email;
@@ -21,6 +21,17 @@ public class EmpleadoUAC implements Serializable {
         this.name = name;
         this.email = email;
         this.workStation = workStation;
+    }
+    
+    @Override
+    public String toString() {
+      String empleadojson;
+      empleadojson= "{"+
+              "nombre:" + this.name +
+              ", correo:" + this.email +
+              ", lugarTrabajo:" + this.workStation +
+              "}";
+      return empleadojson;
     }
 
 }
