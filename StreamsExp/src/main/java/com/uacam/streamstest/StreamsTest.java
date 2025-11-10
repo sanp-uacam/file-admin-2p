@@ -1,5 +1,7 @@
 package com.uacam.streamstest;
 
+
+import com.google.gson.Gson;
 import java.io.*;
 import java.util.ArrayList;
 
@@ -97,11 +99,17 @@ public class StreamsTest {
         empleados.add(new EmpleadoUAC("Sergio", "serganoh@uacam.mx", "FDI"));
         empleados.add(new EmpleadoUAC("Andres", "andres@uacam.mx", "FDM"));
         empleados.add(new EmpleadoUAC("Pedro", "pedro@uacam.mx", "FDB"));
-
+        
+        Gson gson = new Gson();
+            String jsonString = gson.toJson(empleados);
+            System.out.println(jsonString);
+            
+        
         try (OutputStream fos = new FileOutputStream("EmpleadosUAC_DB.txt"); 
                 ObjectOutputStream oos = new ObjectOutputStream(fos)) {
             
             oos.writeObject(empleados);
+            
             
         } catch (FileNotFoundException ex) {
             System.getLogger(StreamsTest.class.getName()).log(System.Logger.Level.ERROR, (String) null, ex);
@@ -133,7 +141,7 @@ public class StreamsTest {
     }
 
     public static void main(String[] args) throws FileNotFoundException {
-        leerEmpleado();
+        escribirEmpleado();
 
     }
 }

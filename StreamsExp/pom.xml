@@ -10,5 +10,14 @@
         <maven.compiler.release>24</maven.compiler.release>
         <exec.mainClass>com.uacam.streamstest.StreamsTest</exec.mainClass>
     </properties>
+
+    
     <name>StreamsExp</name>
+    <dependencies>    
+    <dependency>
+        <groupId>com.google.code.gson</groupId>
+        <artifactId>gson</artifactId>
+        <version>2.9.0</version>
+    </dependency>
+    </dependencies>
 </project>
