@@ -1,0 +1,18 @@
+{
+  "type": "object",
+  "properties": {
+    "id": { "type": "integer" },
+    "studentName": { "type": "string" },
+    "score": { "type": "number" },
+    "subject": { "type": "string" },
+    "status": { 
+      "type": "string",
+      "enum": ["APPROVED", "REJECTED", "PENDING"] 
+    },
+    "timestamp": { 
+      "type": "string",
+      "format": "date-time" 
+    }
+  },
+  "required": ["id", "studentName", "score", "subject", "status", "timestamp"]
+}
