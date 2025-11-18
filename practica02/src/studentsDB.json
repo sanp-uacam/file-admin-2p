@@ -1,0 +1,54 @@
+{
+  "type": "object",
+  "properties": {
+    "idStudent": {
+      "type": "integer",
+      "description": "Matrícula única del estudiante."
+    },
+    "name": {
+      "type": "string",
+      "description": "Nombre(s) del estudiante."
+    },
+    "lastName": {
+      "type": "string",
+      "description": "Apellidos del estudiante."
+    },
+    "degree": {
+      "type": "string",
+      "description": "Carrera, valor del enum Degree (ej. ING_SOFTWARE)."
+    },
+    "semester": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 10,
+      "description": "Semestre actual del estudiante (1-10)."
+    },
+    "promedio": {
+      "type": "number",
+      "description": "Promedio académico."
+    },
+    "gender": {
+      "type": "string",
+      "description": "Género, valor del enum Gender (ej. masculino)."
+    },
+    "phoneNumber": {
+      "type": "string",
+      "description": "Número telefónico del estudiante."
+    },
+    "address": {
+      "type": "string",
+      "description": "Dirección física del estudiante."
+    }
+  },
+  "required": [
+    "idStudent",
+    "name",
+    "lastName",
+    "degree",
+    "semester",
+    "promedio",
+    "gender",
+    "phoneNumber",
+    "address"
+  ]
+}
